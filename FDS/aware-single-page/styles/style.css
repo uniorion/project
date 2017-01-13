@@ -1,0 +1,1070 @@
+@charset "utf-8"; 
+@import url(fonts.css);
+
+/*		reset			*/
+html, body, ul, p {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+a:link,
+a:visited {
+	color: #222;
+}
+a:hover, 
+a:focus {
+	border: 0;
+	outline: 1px solid #35d0ff;
+}
+btn-side-menu:hover, 
+btn-side-menu:focus {
+	outline: 1px solid #35d0ff;
+}
+img {
+	vertical-align: top;
+}
+
+html {
+	font-size: 0.625rem;
+}
+body {
+	background: #fff;
+	font-family: "VarelaRound Regular";
+	color: #222;
+}
+
+/****************/
+/*		공통class		*/
+.clear-fix:after,
+.clear-fix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.readable-hidden {
+	position: absolute;
+	display:block;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+	overflow: hidden;
+} 
+ 
+/****************/
+/*		레이아웃 		*/
+ 
+.header {
+	height: 8rem;
+	position: relative;
+}
+.contents-category {
+	height: 24rem;
+}
+.contents-featured {
+	height: 48rem;
+}
+.contents-blog {
+	height: 24rem;
+}
+.contents-comments {
+	height: 48rem;
+}
+.contents-about {
+	height: 48rem;
+}
+.contents-brands {
+	height: 12rem;
+}
+.footer {
+	/*background: #F1A568;*/
+	height: 18rem;
+}
+
+/****************/
+/*		헤더영역 		*/
+.logo,
+.hearder-menu {
+	float: left;
+	margin-top: 3rem;
+	margin-bottom: 0;
+	font-size: 1.4rem;
+	line-height: 2rem;
+}
+.logo {
+	margin-left: 8.2rem;
+}
+.hearder-menu {
+	margin-left: 6rem;
+}
+.hearder-menu li,
+.header-my-menu li {
+	float: left;
+}
+.hearder-menu a {
+	display: block;
+	margin-right: 2.9rem;
+}
+.hearder-menu a:after,
+.hearder-menu a::after {
+	content: "";
+	float: right;
+	margin-left: 1rem;
+	margin-top: 0.9rem;
+	width: 0.6rem;
+	height: 0.4rem;
+	background: url(../images/icon/icon-arrow-down.png) no-repeat;
+}
+.header-my-menu {
+	float: right;
+	margin-top: 3rem;
+	margin-bottom: 0;
+}
+.header-my-menu li {
+	box-sizing: border-box;
+	margin-right: 4rem;
+	line-height: 2rem;
+}
+.header-my-menu li:last-child {
+	margin-right: 3rem;
+} 
+.header-my-menu a {
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	padding-top: 0.2rem;
+}
+.btn-side-menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 13px;
+	height: 13px;
+	margin-top: 3.4rem;
+	margin-left: 3rem;
+	padding: 0;	
+	border: 0;
+	background: url(../images/btn/btn-hambug.png) no-repeat;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+/*------	장바구니 갯수 표시 아이콘 ------*/
+.items-counter {
+	position: absolute;
+	top: -0.9rem;
+	right: -0.9rem;
+	width: 1.6rem;
+	height: 1.6rem;
+	color: #fff;
+	background: #494189;
+	border-radius: 0.8rem;
+}
+.items-counter:before,
+.items-counter::before {
+	content: attr(data-item);
+	display: block;
+	padding-left: 0.5rem;
+	line-height: 1.6rem;
+	font-size: 0.9rem;
+}
+
+/**********************/
+/*		메인 - 슬라이더 		*/
+.contents-slider {
+	height: 12rem;
+}
+.slider-main,
+.slider-list {
+	float: left;
+}
+.slider-main {
+	width: 72rem;
+}
+.slider-list {
+	width: 24rem;
+}
+
+/*		메인 슬라이더 	*/
+.slider-main ul li{
+	position: relative;
+}
+.product-info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.product-info a {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	overflow: hidden;
+}
+.product-info a span {
+	position: absolute;
+	left: 12rem;
+	width: 24rem;
+}
+.product-info .category {
+	top: 12rem;
+	font-size: 1.2rem;
+	font-family: "Oswald Bold";
+	color: #1f4ba5;
+	letter-spacing: 0.1em;
+}
+.product-info .names {
+	top: 16rem;
+	font-size: 3.6rem;
+}
+.product-info .desription {
+	top: 26rem;
+	font-size: 1.6rem;
+	color: #868686;
+	line-height: 2.4rem;
+}
+.product-info .btn-price {
+	position: absolute;
+	top: 33.5rem;
+	left: 12rem;
+}
+.btn-price * {
+	box-sizing: border-box;
+	float: left;
+	height: 3rem;
+	background: #1f4ba5;
+	color: #fff;
+	font-size:  1.2rem;
+	line-height: 3rem;
+}
+.btn-price {
+	position: relative;
+	z-index: 10;
+}
+.btn-price em {
+	background: #1f4ba5;
+	padding-left: 2rem;
+	width: 6.8rem;
+	font-style: normal;
+	font-family: "Oswald Bold";
+	letter-spacing: 0.1em;
+	border-radius: 1.5rem 0 0 1.5rem;
+	cursor: default;
+}
+.btn-price a {
+	padding-left: 2.4rem;
+	width: 9.5rem;
+	border-left: 1px solid #365dae;
+	border-radius: 0 1.5rem 1.5rem 0;
+}
+.btn-price a:link,
+.btn-price a:visited {
+	color: #fff;
+}
+.slider-main {
+	position: relative;
+}
+.slider-nav {
+	box-sizing: border-box;
+	position: absolute;
+	top: 22.4rem;
+	left: 0;
+	padding-left: 3rem;
+	width: 100%;
+	height: 32px;
+}
+.btn-prev,
+.btn-next {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	z-index: 10;
+}
+.btn-prev {
+	background: url("../images/btn/btn-prev.png") no-repeat;
+}
+.btn-next {
+	top: 0;
+	right: 0;
+	margin-right: 3rem;
+	background: url("../images/btn/btn-next.png") no-repeat;
+}
+/*		슬라이더 목록 	*/
+.slider-list li a {
+	display: block; 
+	position: relative;
+}
+.slider-list li a:hover:after,
+.slider-list li a:hover::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("../images/contents/cont-slide-item-hover.png") no-repeat;
+}
+
+/*  category 목록 디자인 */
+.contents-category a {
+	display: block;
+	position: relative;
+}
+.contents-category p {
+	color: #1f4ba5;
+	font-size: 1.2rem;
+	font-family: "Oswald Bold";	
+	letter-spacing: 0.1em;
+}
+.contents-category em {
+	font-style: normal;	
+}
+.contents-category a > *:not(img) {
+	position: absolute;
+}
+.contents-category li:nth-child(1) p {
+	top: 12rem;
+	left: 22rem;
+}
+.contents-category li:nth-child(1) em {
+	top: 15.2rem;
+	left: 12.2rem;
+	font-size: 2.2rem; 
+	line-height: 3rem;
+}
+.contents-category li:nth-child(1) span {
+	top: 18.9rem;
+	left: 15.8rem;
+	color: #868686;
+	font-style: normal;
+	font-size: 1.4rem; 
+	line-height: 2.2rem;
+}
+.contents-category li:nth-child(2) p { 
+	top: 4rem;
+	left: 10.8rem;
+}
+.contents-category li:nth-child(2) em,
+.contents-category li:nth-child(3) em {
+	width: 15.5rem;
+	font-size: 1.6rem; 
+	line-height: 2.4rem;
+	text-align: center;
+} 
+.contents-category li:nth-child(2) em {
+	top: 17.4rem;
+	left: 4.5rem;
+} 
+.contents-category li:nth-child(3) p { 
+	top: 14.4rem;
+	left: 8rem;
+}
+.contents-category li:nth-child(3) em {
+	top: 17.4rem;
+	left: 4.8rem;
+} 
+.area-title {
+	color: #1f4ba5;
+	font-size: 1.8rem;
+	font-family: "Oswald Bold";
+	letter-spacing: 0.1em;
+	line-height: 3rem;
+}
+
+/*  	featured product 디자인 	*/
+.contents-featured .area-title{
+	margin-top: 8.7rem;
+	margin-left: 7.5rem;
+	width: 9rem;
+	text-align: center;
+}
+.contents-featured li {
+	box-sizing: border-box;
+	border-right: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+}
+.contents-featured li:nth-child(1) {
+	position:relative;
+	border-left: 1px solid #ececec;
+}
+.contents-featured li:nth-child(5) {
+	border-left: 1px solid #ececec;
+}
+.contents-featured li:nth-child(1):before,
+.contents-featured li:nth-child(1)::before {
+	content: "";
+	position: absolute;
+	top: 4.3rem;
+	left: 11.2rem;
+	width: 16px;
+	height: 14px;
+	background: url("../images/icon/icon-ruby.png") no-repeat;
+}
+.contents-featured li:nth-child(1) p {
+	color: #868686;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	text-align: center;
+} 
+.contents-featured li a {
+	display: block;
+	position:relative;
+	text-align: center;
+	width: 100%;
+	height: 100%; 
+}
+.contents-featured li .featured-names,
+.contents-featured li .featured-price {
+	position: absolute;
+}
+.contents-featured li .featured-names {
+	top: 3rem;
+	width: 24rem;
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+}
+.contents-featured li .featured-price {
+	position: relative;
+ 	bottom: 3rem;
+	width: 24rem;
+	font-style: normal;
+	font-family: "Oswald Bold";
+	font-size: 1.2rem;
+}
+.contents-featured li .hit, 
+.contents-featured li .sale, 
+.contents-featured li .new {
+	position: absolute;
+	top: 0.2rem;
+	left: 2.9rem;
+	height: 1.5rem;
+	text-indent: -9999rem;
+	overflow: hidden;
+}
+.contents-featured li .hit {
+	width: 2.9rem;
+	background: url("../images/icon/icon-hit.png") no-repeat;
+}
+.contents-featured li .sale {
+	width: 3.4rem;
+	background: url("../images/icon/icon-sale.png") no-repeat;
+}
+.contents-featured li .new {
+	width: 2.9rem;
+	background: url("../images/icon/icon-new.png") no-repeat;
+}
+
+/* OUR BLOG 디자인  */
+.contents-blog .area-title{
+	margin-top: 8.7rem;
+	margin-left: 9.8rem;
+	width: 4.4rem;
+	text-align: center;
+}
+.contents-blog li {
+	box-sizing: border-box;
+	border-right: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+}
+.contents-blog li:nth-child(1) {
+	position:relative;
+	border-left: 1px solid #ececec;
+}
+.contents-blog li:nth-child(1):before,
+.contents-blog li:nth-child(1)::before {
+	content: "";
+	position: absolute;
+	top: 4.3rem;
+	left: 11.2rem;
+	width: 16px;
+	height: 14px;
+	background: url("../images/icon/icon-news.png") no-repeat;
+}
+.contents-blog li:nth-child(1) p {
+	color: #868686;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	text-align: center;
+} 
+.contents-blog li a {
+	display: block;
+	position:relative;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.contents-blog li .blog-date,
+.contents-blog li .blog-title,
+.contents-blog li .blog-author {
+	position: absolute;
+}
+.contents-blog li img {
+	display: none;
+	object-fit: cover;
+}
+.contents-blog li a:hover,
+.contents-blog li a:focus {
+	color: #fff;
+}
+.contents-blog li a:hover img,
+.contents-blog li a:focus img {
+	display: block;
+}
+.contents-blog li .blog-date {
+	color: #868686;
+	font-size: 1.2rem;
+	font-family: "PT Serif Italic";
+}
+.contents-blog li .blog-title {
+	width: 15.8rem;
+	font-size: 1.8rem;	
+	line-height: 2.4rem;
+}
+.contents-blog li .blog-author {
+	color: #aba9a2;
+	font-family: "Oswald Bold";
+	letter-spacing: 0.1em;
+}
+.contents-blog li .blog-author i {
+	font-family: "PT Serif Italic";
+}
+.contents-blog li:nth-child(2) .blog-date {
+	top: 6rem;
+	left: 8.2rem;
+}
+.contents-blog li:nth-child(2) .blog-title {
+	top: 9rem;
+	left: 4.4rem;
+}
+.contents-blog li:nth-child(2) .blog-author {
+	bottom: 5.7rem;
+	left: 7.9rem;
+}
+.contents-blog li:nth-child(3) .blog-date {
+	top: 4.5rem;
+	left: 8.5rem;
+}
+.contents-blog li:nth-child(3) .blog-title {
+	top: 7.6rem;
+	left: 4.4rem;
+}
+.contents-blog li:nth-child(3) .blog-author {
+	bottom: 4.9rem;
+	left: 7.9rem;
+}
+.contents-blog li:nth-child(4) .blog-date,
+.contents-blog li:nth-child(5) .blog-date {
+	top: 2.6rem;
+	left: 3rem;
+}
+.contents-blog li:nth-child(4) .blog-title,
+.contents-blog li:nth-child(5) .blog-title {
+	top: 5rem;
+	left: 3rem;
+	width: 16.5rem;
+	font-size: 1.4rem;
+	text-align: left;
+	line-height: 1.4rem;
+}
+
+/*	WHAT PEOPLE SAY 디자인 	*/
+.contents-comments {
+	position: relative;
+}
+.contents-comments .area-title {
+	margin-top: 3.3rem;
+	margin-left: 16.2rem;
+}
+.contents-comments .area-title::after {
+	content: "";
+	position: absolute;
+	top: 9.3rem;
+	left: 23.4rem;
+	width: 13px;
+	height: 11px;
+	background: url("../images/icon/icon-double-quote-o.png") no-repeat;
+}
+.contents-comments:before,
+.contents-comments::before {
+	content: "";
+	position: absolute;
+	top: 3.9rem;
+	left: 3rem;
+	width: 16px;
+	height: 16px;
+	background: url("../images/icon/icon-chat.png") no-repeat;
+}
+.btn-reload {
+	position: absolute;
+	top: 3.4rem;
+	right: 3rem;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	border: none;
+	background: url("../images/btn/btn-reload.png") no-repeat;
+}
+.btn-reload:hover {
+	cursor: pointer;
+}
+.contents-comments,
+.contents-about {
+	box-sizing: border-box;
+	border-right: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+}
+.contents-comments {
+	border-left: 1px solid #ececec;	
+}
+
+.comments-list {
+	margin-top: 5.2rem;
+	margin-left: 3.9rem;
+}
+.comments-list li {
+	position: relative;
+	width: 41.4rem;
+	text-align: center;
+}
+.comments-list li q {
+	color: #868686;
+	font-size: 1.8rem;
+	font-family: "PT Serif Italic";
+	line-height: 3rem;
+}
+.comments-list li q::before,
+.comments-list li q::after {
+	content: "";
+}
+.comments-list li figure {
+	position: absolute;
+	margin: 0;
+	bottom: -10.2rem;
+	left: 10.4rem;
+}
+.comments-list li figure > * {
+	float: left;
+}
+.comments-list li img {
+	-webkit-clip-path: circle(50%);
+	clip-path: circle(50%);
+}
+.comments-list li figcaption {
+	margin-top: 1.2rem;
+	margin-left: 2rem;
+	font-size: 1.4rem;
+	line-height: 1.6rem;
+}
+.comments-list li figcaption i {
+	color: #b8b8b8;
+	font-size: 1.2rem;
+	line-height: 1.8rem;	
+}
+.pagination {
+	margin-left: 22.5rem;
+	margin-bottom: 4.2rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.pagination li {
+	float: left;
+	margin-right: 0.8rem;
+	width: 10px;
+	height: 10px;
+	text-indent: -9999px;
+	background: url("../images/btn/btn-paging-off.png") no-repeat;
+	cursor: pointer;
+}
+.pagination li.on {
+	margin-top: -0.2rem;
+	width: 14px;
+	height: 14px;
+	background: url("../images/btn/btn-paging-on.png") no-repeat;	
+}
+
+/*	WHO WE ARE 디자인 	*/
+.contents-about {
+	position: relative;
+}
+.contents-about .area-title {
+	margin-top: 3.3rem;
+	margin-left: 18.6rem;
+}
+.contents-about .area-title::after {
+	content: "";
+	position: absolute;
+	top: 24.3rem;
+	left: 23.3rem;
+	width: 13px;
+	height: 11px;
+	background: url("../images/icon/icon-double-quote-o.png") no-repeat;
+}
+.contents-about:before,
+.contents-about::before {
+	content: "";
+	position: absolute;
+	top: 3.9rem;
+	left: 2.9rem;
+	width: 16px;
+	height: 16px;
+	background: url("../images/icon/icon-briefcase.png") no-repeat;
+}
+.contents-about span {
+	position: absolute;
+	top: 4rem;
+	right: 3rem;
+	width: 6.3rem;
+	color: #868686;
+	font-size: 1.4rem;
+}
+.about-info {
+	position: relative;
+	width: 48rem;
+	height: 12rem;
+}
+.about-info div {
+	box-sizing: border-box;
+	position: absolute;
+	width: 12rem;
+	height: 6rem;
+	background: #1f4ba5;
+	color: #fff;
+}
+.about-info div em {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-style: normal;
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+	font-family: "Oswald Bold";
+	letter-spacing: 0.1em;
+}
+.about-info div i {
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	font-family: "PT Serif Italic";
+}
+.about-info .countries {
+	top: 6rem;
+	left: 6rem;
+	padding-top: 1.5rem;
+	padding-left: 5.1rem;
+}
+.about-info .brands {
+	top: 0;
+	left: 30rem; 
+	padding-top: 1.5rem; 
+	padding-left: 5.2rem;
+}
+.about-info .countries::before,
+.about-info .brands::before {
+	content: "";
+	position: absolute;
+	top: 2.2rem;
+	left: 2rem;
+	height: 16px;
+}
+.about-info .countries::before {
+	width: 13px;
+	background: url("../images/icon/icon-map.png") no-repeat;
+}
+.about-info .brands::before { 
+	width: 14px;
+	background: url("../images/icon/icon-storage.png") no-repeat;
+}
+.about-info span {
+	display: block;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+}
+.about-info .about-pic-1 {
+	top: 0;
+	left: 0;
+	background: url(../images/common/about-pic-01.png) no-repeat;
+}
+.about-info .about-pic-2 {
+	top: 0;
+	left: 18rem;
+	background: url(../images/common/about-pic-02.png) no-repeat;
+}
+.about-info .about-pic-3 {
+	top: 6rem;
+	left: 24rem;
+	background: url(../images/common/about-pic-03.png) no-repeat;
+}
+.about-info .about-pic-4 {
+	top: 6rem;
+	right: 6rem;
+	background: url(../images/common/about-pic-04.png) no-repeat;
+}
+.about-info .about-pic-5 {
+	top: 6rem;
+	right: 0;
+	background: url(../images/common/about-pic-05.png) no-repeat;
+}
+.contents-about q {
+	position: absolute;
+	top: 27.4rem;
+	left: 4.7rem;
+	width: 38.5rem;
+	color: #868686;
+	font-size: 2.4rem;
+	line-height: 3rem;
+	font-family: "PT Serif Italic";
+} 
+.contents-about q::before,
+.contents-about q::after {
+	content: "";
+}
+.contents-about p {
+	position: absolute;
+	top: 35.1rem;
+	left: 3rem;
+	width: 42.5rem;
+	color: #868686;
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+	text-align: center;
+}
+
+/* Brands 디자인 */
+.contents-brands li {
+	box-sizing: border-box;
+	text-indent: -9999px;
+	text-align: center;
+	border-right: 1px solid #ececec;
+}
+.contents-brands li:nth-child(1) {
+	background: url("../images/common/brands-logo-HnM.png") no-repeat 50% 50%;
+	border-left: 1px solid #ececec;
+}
+.contents-brands li:nth-child(2) {
+	background: url("../images/common/brands-logo-puma.png") no-repeat 50% 50%;
+}
+.contents-brands li:nth-child(3) {
+	background: url("../images/common/brands-logo-adidas.png") no-repeat 50% 50%;
+}
+.contents-brands li:nth-child(4) {
+	background: url("../images/common/brands-logo-converse.png") no-repeat 50% 50%;
+}
+.contents-brands li:nth-child(5) {
+	background: url("../images/common/brands-logo-boss.png") no-repeat 50% 50%;
+}
+.contents-brands li:nth-child(6) {
+	background: url("../images/common/brands-logo-nike.png") no-repeat 50% 50%;
+}
+.contents-brands li:nth-child(7) {
+	background: url("../images/common/brands-logo-crown.png") no-repeat 50% 50%;
+}
+.contents-brands li:nth-child(8) {
+	position: relative;
+	padding-top: 3.6rem;
+	text-indent: 0;
+	color: #1f4ba5;
+	font-size: 1.4rem;
+	font-family: "Oswald Bold";
+	line-height: 2.4rem;
+}
+.contents-brands li:nth-child(8) em {
+	position: absolute;
+	top: 3.2rem;
+	left: 1.7rem;
+	color: #e5e5e5;
+	font-size: 6rem;
+	font-style: normal;
+	line-height: 6rem;
+	z-index: -1;
+}
+.footer {
+	background: #222;
+}
+.footer-copyright,
+.footer-guide,
+.footer-socialnPay {
+	border-top: 1px solid #353535;
+	border-left: 1px solid #353535;
+	box-sizing: border-box;
+}
+.footer-category {
+	box-sizing: border-box;
+	padding-top: 2.5rem;
+	margin-left: 9rem;
+	height: 6rem;
+	text-align: center;
+}
+.footer-category li {
+	float: left;
+	margin-left: 3.8rem;
+	color: #fff;
+}
+.footer-category li::after {
+	content: "\2022";
+	padding-left: 3.8rem;
+	color: #656565;
+}
+.footer-category li a {
+	color: #fff;
+	font-size: 1.4rem;
+}
+.footer-category li:first-child {
+	margin-left: 0;
+}
+.footer-category li:last-child::after {
+	content: "";
+}
+
+.footer-copyright {
+	position: relative;
+	color: #656565;
+}
+.footer-copyright::before {
+	content: "";
+	position: absolute;
+	top: 2.7rem;
+	left: 7.3rem;
+	width: 97px;
+	height: 20px;
+	background: url("../images/common/logo-aware-footer.png") no-repeat;
+}
+.footer-copyright p {
+	margin-top: 6.5rem;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	font-family: "PT Serif Italic";
+	text-align: center;
+}
+.footer-guide form fieldset {
+	border: none;
+}
+.footer-guide form input {
+	background: #393939;
+	margin-left: 5rem;
+	width: 31.5rem;
+	height: 3rem;
+	padding-left: 4.5rem;
+	border: none;
+	border-radius: 1.5rem;
+	color: #fff;
+	font-size: 1.2rem;
+	font-family: "PT Serif Italic";
+}
+.footer-guide form label {
+	position: relative;
+}
+.footer-guide form label::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 2.2rem;
+	left: 6.4rem;
+	width: 16px;
+	height: 14px;
+	background: url("../images/icon/icon-mail.png") no-repeat;
+}
+.footer-guide form input::-webkit-input-placeholder {
+	color: #757575;
+}
+.footer-guide form button {
+	position: relative;
+	border: none;
+	background: none;
+	text-indent: -9999px;
+	top: 0.2rem;
+	left: -3rem;
+	width: 18px;
+	height: 15px;
+	background: url(../images/icon/icon-arrow-right.png) no-repeat center;
+	cursor: pointer;
+}
+.footer-guide ul {
+	position: relative;
+	margin-top: 1.5rem;
+	margin-left: 7.6rem;
+}
+.footer-guide li {
+	float: left;
+	margin-right: 2.3rem;
+}
+.footer-guide li a {
+	color: #959595;
+	font-size: 1.2rem;
+	line-height: 2.4rem;	
+}
+
+.footer-socialnPay ul {
+	box-sizing: border-box;
+}
+.footer-socialnPay ul:first-child {
+	height: 6rem;
+	border-bottom: 1px solid #353535;
+}
+.footer-socialnPay ul li {
+	background: #fff;
+	float: left;
+	text-indent: -9999px
+}
+.footer-socialnPay ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.footer-social {
+	height: 6rem;
+}
+.footer-social li {
+	margin-top: 2.5rem;
+	margin-right: 3.5rem;
+	width: 16px;
+	height: 18px;
+}
+.footer-social li:nth-child(1) {
+	margin-left: 4rem;
+	background: url("../images/icon/icon-social-twitter.png") no-repeat;
+}
+.footer-social li:nth-child(2) {
+	/*margin-top: -0.1rem;*/
+	background: url("../images/icon/icon-social-instagram.png") no-repeat;
+}
+.footer-social li:nth-child(3) {
+	/*margin-top: -0.2rem;*/
+	background: url("../images/icon/icon-social-pinterest.png") no-repeat;
+}
+.footer-social li:nth-child(4) {
+	/*margin-top: -0.3rem;*/
+	margin-right: 0;
+	background: url("../images/icon/icon-social-facebook.png") no-repeat;
+}
+.footer-payment {
+	margin-top: 2.5rem;
+	margin-left: 3.6rem;
+}
+.footer-payment li {
+	margin-right: 2rem;
+}
+.footer-payment li:nth-child(1) {
+	width: 43px;
+	height: 14px;
+	background: url("../images/icon/icon-pay-visa.png") no-repeat;
+}
+.footer-payment li:nth-child(2) {
+	width: 34px;
+	height: 20px;
+	background: url("../images/icon/icon-pay-mastercard.png") no-repeat;
+}
+.footer-payment li:nth-child(3) {
+	width: 58px;
+	height: 16px;
+	background: url("../images/icon/icon-pay-paypal.png") no-repeat;
+}

@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+html { 
+	font-size: 0.625rem;
+}
+body { 
+	font-size: 1em;
+	font-family: 'Abel';
+}
+.ft-cinzel-head{
+	font: 4rem/1.2 'Cinzel', serif;
+}
+.magazine-photo-area {	
+	float: left;
+  position: fixed;
+}
+
+.magazine-photo-title {
+	background: #000;
+	width: 800px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: 100% 0; 
+	transform: translateX(-100%) rotate(-90deg) ;
+	color: #fff;
+}
+.magazine-photo-title h1{
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 2rem 0 0 1rem;
+}
+.magazine-photo-title p {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0 0.5rem 1rem 1.2rem;
+	font-size: 1.4rem;
+	letter-spacing: 0.1rem;
+}
+.magazine-photo-area img{
+	/*width: 50vw;
+	height: auto;*/
+	margin-left: 114px;
+	width: auto;
+	height: 800px;
+	vertical-align: top;
+	border: 0;
+}
+.magazine-contents{
+	float: right;
+	position: relative;
+  background: #fff;
+ 	padding-top: 3rem;
+	padding-right: 2rem;
+  width: 40vw;
+	font-size: 1.8rem; 
+}
+.magazine-contents-head img {
+	float: left;
+	position: relative;
+	top: -1rem;
+	left: 2rem;
+}
+.magazine-contents-head p{
+	margin-bottom: 0;
+}
+.magazine-contents-head p:nth-of-type(1) {
+	padding-top: 5rem;
+}
+.magazine-contents-parag {
+	margin-top: 2rem;
+	padding-top: 1rem;
+	border-top: 3px solid #000;
+	font-size: 1.4rem;
+}
+.col2 {
+	column-count: 2;
+	column-gap: 2rem;
+}
+.col3 {
+	column-count: 3;
+	column-gap: 2rem;
+}
+.dropcap::first-letter {
+  float: left;
+	font-size: 6rem;
+  margin-right: 15px; 
+  font-weight: 700;
+  line-height: 0.9;
+}

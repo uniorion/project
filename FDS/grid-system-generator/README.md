@@ -5,10 +5,10 @@
 # Grid System Generator
 
 #### site 
-https://uniorion.github.io/blog/portfolio/grid-generator/
+https://uniorion.github.io/project/FDS/grid-system-generator/
 
 #### source
-https://github.com/uniorion/grid-generator
+https://github.com/uniorion/project/tree/master/FDS/grid-system-generator
 
 
 ### # 목적 

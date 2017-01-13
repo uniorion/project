@@ -1,0 +1,415 @@
+@charset "utf-8";
+
+/******************/
+/* 		reset		 		*/
+html, body {
+	margin: 0;
+	padding: 0;
+} 
+
+/******************/
+/* 		가이드		 		*/
+.guide {
+	background: url("../images/leading-21.png");
+	min-height: 100vh;
+}
+
+/******************/
+/* 		공통		 			*/
+.clear-fix:after,
+.clear-fix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.readable-hidden {
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+}
+
+/******************/
+/* 타이포그래피	  		*/
+body {
+	/*font: 0.875rem/1.5 "Spoqa Han Sans", "Nanum Gothic", Dotum, Sans-Serif;*/
+	font-size: 0.875rem;
+	line-height: 1.3125rem;
+	font-family: "Spoqa Han Sans", "Nanum Gothic", Dotum, Sans-Serif;
+}
+p {
+	margin-top: 1.3125rem;
+	margin-bottom: 0;
+	letter-spacing: -0.02em;
+}
+
+
+/******************/
+/*  레이아웃 	  		*/
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 120rem;
+}
+.container > div[class^="area-"] { 
+	margin-top: 5.25rem;
+	width: 50rem;
+}
+.area-typography,
+.area-list { 
+	margin-left: 10rem;
+}
+.area-color,
+.area-table {
+	margin-left: 0; 
+}
+.container > div[class^="area-"] > div[class^="content-"] {
+	box-sizing: border-box;
+	margin-top: 1.25rem;
+	padding-top: 1.3125rem;
+	border-top: 1px solid #6b85f4;
+	height: 39.375rem;
+}
+ 
+/*  영역의 상단제목 	*/
+.area-title p {
+	float: left;
+	color: #7171ef;
+	letter-spacing: 0;
+}
+.area-title .title{
+	font-size: 1.5rem;
+	font-weight: bold;
+}  
+.area-title .description {
+	font-size: 0.75rem;
+	margin-left: 1.1875rem;
+} 
+ 
+/**********************/
+/* 	Typography 디자인		*/
+.content-typography div * {	
+	float: left;
+}
+.content-typography div p {
+	margin-right: 2.5rem;
+	color: #7171ef;
+	letter-spacing: 0;
+}  
+.parag-1 p,
+.parag-2 p {
+	padding-top: 1.3125rem;
+}
+.parag-3 p,
+.parag-4 p,
+.parag-5 p {
+	padding-top: 0.625rem;
+} 
+.parag-p p:first-child {
+	margin-top: 0;
+	height: 189px;
+}
+.parag-p p:last-child {
+	float: none;
+	width: 40.625rem;
+	color: #000;
+	letter-spacing: -0.02em;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 1.3125rem;
+	margin-bottom: 0;
+	font-weight: 200;
+	letter-spacing: -0.05em;
+	color: #787f94;
+}
+h1, h2 {
+	line-height: 3.9375rem;
+}
+h3, h4, h5 {
+	line-height: 2.625rem;
+}
+h6{
+	line-height: 1.3125rem;
+}
+h6 {  
+	font-size: 0.875rem;
+}
+h5 {  
+	font-size: 1.14887rem;  
+}
+h4 {  
+	font-size: 1.50847rem; 
+}
+h3 { 
+  font-size: 1.98062rem; 
+}
+h2 { 
+  font-size: 2.60056rem; 
+}
+h1 {  
+  font-size: 3.41454rem; 
+}
+
+
+/******************/
+/* 	컬러  디자인 		*/
+.content-color ul,
+.content-color li {
+	list-style-type: none;
+}
+.content-color ul {
+	margin-top: 1.3125rem;
+	padding-left: 0;
+}
+.content-color li {
+	float: left;
+	margin-right: 1.875rem;
+	font-family: "Helvetica"; 
+}
+.content-color li p {
+	margin-top: 0;
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: 0;
+}
+.content-color li>p {
+	margin-top: 0.625rem;
+	font-size: 0.75rem;
+	color: #000;
+	line-height: 0.875rem;
+}
+.color-box {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0;
+	width: 6.25rem;
+	height: 6.25rem;
+}
+.color-box.type1 {
+	background: #787F94;	
+}
+.color-box.type2 {
+	background: #7171EF;	
+}
+.color-box.type3 {
+	background: #44CB83;	
+}
+.color-box.type4 {
+	background: #63A2FC;	
+}
+.color-box.type5 {
+	background: #FF5448;	
+}
+.color-box.type6{
+	background: #FCB409;	
+}
+
+/******************/
+/* 	리스트 디자인 		*/
+.content-list-1,
+.content-list-2,
+.content-list-3 {
+	float: left;
+}
+.content-list-1,
+.content-list-2 {
+	width: 10rem;
+}
+.content-list-3 {
+	width: 20rem;
+}
+.content-list ul, 
+.content-list ol,
+.content-list-1 li 
+.content-list-2 li { 
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+  letter-spacing: -0.01em;
+  font-weight: bold;
+}
+.content-list ul, 
+.content-list-1 li {
+	list-style-type: none;
+  color: #787f94;
+} 
+.content-list ol, 
+.content-list-2 li {
+	margin-left: 0.5rem;
+  color: #44cb83;	
+}
+/*
+  •  "\2022"
+  ◦  "\25E6"
+  ▪  "\25AA"
+*/
+.content-list-1>li  {
+	margin-top: 1.3125rem;
+}
+.content-list-1 li li {
+	font-weight: normal;
+}
+.content-list-1 li:before,
+.content-list-1 li::before {
+	padding-right: 0.62399rem;
+  content: "\2022";
+  color: #44cb83;
+}
+.content-list-1 li li:before,
+.content-list-1 li li::before {
+	margin-left: 0.9375rem;
+	padding-right: 0.62399rem;
+  content: "\25E6";
+}
+.content-list-2>li  {
+	margin-top: 1.3125rem;
+}
+.content-list-2 li li {
+	font-weight: normal;
+	/*margin-left: 0.9375rem;*/
+	padding-left: 0.375rem;
+}
+.content-list-2 .ol-color-content {
+	color: #787f94;
+} 
+
+.content-list-3 { 
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+  letter-spacing: 0.01em;
+}
+.content-list-3 dt {
+	margin-top: 1.3125rem;
+	margin-left: 0.875rem; 
+	letter-spacing: 0.01em;
+	font-weight: bold;
+	color: #44cb83;
+}
+.content-list-3 dd {
+	position: relative;
+	margin-left: 2.375rem;
+	letter-spacing: -0.02em;
+	color: #586077;
+  font-weight: normal;
+}
+.content-list-3 dd::before {
+	content: "";
+	position: absolute;
+	top: 0.4375rem;
+	bottom: 0.4375rem;
+	left: -0.625rem;
+	/*height: 100%;*/
+	border: 0.0625rem solid #44cb83;
+} 
+
+/******************/
+/* 	테이블 디자인 		*/
+.table-type1 {
+	margin-top: 1.3125rem;
+}
+.table-type1,
+.table-type1 tr,
+.table-type1 th,
+.table-type1 td {
+	border-collapse: collapse;
+	width: 50rem;
+	padding: 0;
+}
+.table-type1 tr {
+	height: 2.625rem;
+	border-top: 1px solid #e2e1e1;
+	border-bottom: 1px solid #e2e1e1;
+} 
+.table-type1 th {
+	background: #f8f8f8;
+	color: #63a2fc;
+	letter-spacing: -0.025em;
+}
+.table-type1 th,
+.table-type1 td {
+	text-align: center;
+}
+.table-type1 th:nth-child(1),
+.table-type1 td:nth-child(1) {
+	padding-left: 2.3125rem;
+	text-align: left;
+}
+.table-type1 td:nth-child(1) { 
+	/*width: 31.37%;*/
+	font-family: "AppleSDGothicNeo";
+}
+.table-type1 td:nth-child(2) { 	
+	width: 23.13%;
+	letter-spacing: -0.025em;
+}
+.table-type1 td:nth-child(3) { 
+	width: 12%;
+	font-family: "Helvetica";
+}
+.table-type1 td:nth-child(4) { 	
+	width: 19.75%;
+	font-family: "Roboto";
+	letter-spacing: -0.025em;
+}
+.table-type1 td:nth-child(5) { 
+	width: 13.75%;
+	letter-spacing: -0.025em;
+} 
+.table-type2 {
+	margin-top: 5.25rem;
+	border-bottom: 1px solid #505050;
+}
+.table-type2,
+.table-type2 tr,
+.table-type2 th,
+.table-type2 td {
+	border-collapse: collapse;
+	width: 50rem;
+	padding: 0;
+}
+.table-type2 tr {
+	height: 2.625rem;
+	border-bottom: 1px solid #e2e1e1;
+}
+.table-type2 tr:first-child,
+.table-type2 tr:last-child  {
+	border-bottom: 1px solid #505050;
+}
+.table-type2 tr:nth-child(2n) {
+	border-bottom: 1px dashed #e2e1e1;
+}
+.table-type2 th {
+	color: #63a2fc;
+	letter-spacing: -0.025em;
+}
+.table-type2 th,
+.table-type2 td {
+	text-align: center;
+}
+.table-type2 th:nth-child(1) {
+	/*width: 31.37%;*/
+	padding-left: 2.3125rem;
+	text-align: left;
+	font-family: "AppleSDGothicNeo";
+} 
+.table-type2 th:nth-child(2) { 	
+	width: 23.13%;
+	letter-spacing: -0.025em;
+}
+.table-type2 th:nth-child(3) { 
+	width: 12%;
+	font-family: "Helvetica";
+}
+.table-type2 th:nth-child(4) { 	
+	width: 19.75%;
+	font-family: "Roboto";
+	letter-spacing: -0.025em;
+}
+.table-type2 th:nth-child(5) { 
+	width: 13.75%;
+	letter-spacing: -0.025em;
+} 
