@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Generator</title>
+	<link rel="stylesheet" href="style/ress.min.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header-wrap">
+			<header class="header">
+				<h1>GRID SYSTEM GENERATOR</h1>
+			</header>
+		</div>
+		<div class="contents-wrap">
+			<div class="contents">
+				<div class="calculate">
+					<label for="rdo_gs_type_stt">Layout Type</label>
+					<input type="radio" name="rdo_gs_type" id="rdo_gs_type_stt" value="stt" checked>
+					<label for="rdo_gs_type_stt" class="rdo-label">Static</label>
+					<input type="radio" name="rdo_gs_type" id="rdo_gs_type_fld" value="fld">
+					<label for="rdo_gs_type_fld" class="rdo-label">Fluid</label><br>
+					<label for="txt_total_width"><span class="required"></span>Total Width</label>
+					<input type="text" id="txt_total_width" value="960"><span class="unit">px</span><br>
+					<label for="txt_columns"><span class="required"></span>Columns</label>
+					<input type="text" id="txt_columns" value="8"><span class="unit">ea</span><br>
+					<label for="txt_margin_width">Margin</label>
+					<input type="text" id="txt_margin_width" value="15"><span class="unit">px</span><br>
+					<label for="txt_gutter_width">Gutter</label>
+					<input type="text" id="txt_gutter_width" value="10"><span class="unit">px</span>
+					<button class="btn-calculate" type="button">CALCULATE</button>
+				</div>
+				<div class="recommend">
+					<div class="recommend_alert" role="alert">
+						<p>This numbers can't calculate.<br>Try again please.</p>
+					</div>
+					<label for="txt_content_area">Contents Area</label>
+					<input type="text" id="txt_content_area" readonly><span class="unit">px</span><br>
+					<label for="txt_column_width">Columns Width</label>
+					<input type="text" id="txt_column_width" readonly><span class="unit">px</span><br>
+					<label for="txt_fixed_margin">Fixed Margin</label>
+					<input type="text" id="txt_fixed_margin" readonly><span class="unit">px</span><br>
+				</div>
+				<div class="options">
+					<div>
+						<h2>Option</h2>
+						<input type="checkbox" id="chk_opt_pu" checked><label for="chk_opt_pu">Push / Pull</label><br>
+						<input type="checkbox" id="chk_opt_fix" checked><label for="chk_opt_fix">Prefix / Suffix</label><br>
+						<input type="checkbox" id="chk_opt_isolate" checked><label for="chk_opt_isolate">Isolate</label><br>
+					</div>
+					<button class="btn-download" type="button">DOWNLOAD CSS</button>
+				</div>
+				<div class="grid-view">
+		 			<textarea name="txta_css" id="txta_css" cols="109" rows="15">
+		 			</textarea>
+				</div>
+			</div>
+		</div>
+		<div class="footer-wrap">
+			<footer class="footer">
+	 			<ul>
+	 				<li><a href="https://github.com/uniorion/grid-generator">https://github.com/uniorion/grid-generator</a></li>
+	 				<li>by JK.LEE</li>
+	 			</ul>
+			</footer>
+		</div>
+	</div>	
+	<script src="js/js-utils.js"></script>
+	<script src="js/gs-generator.js"></script>
+	<script src="js/gs-make-css.js"></script>
+</body>
+</html>

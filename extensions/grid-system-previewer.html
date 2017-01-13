@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="../../../modules/css/initialization/normalize.css">
+		<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div class="container">
+			<label for="rdo_gs_type_stt">Layout Type</label>
+			<input type="radio" name="rdo_gs_type" id="rdo_gs_type_stt" value="stt" checked>
+			<label for="rdo_gs_type_stt" class="rdo-label">Static</label>
+			<input type="radio" name="rdo_gs_type" id="rdo_gs_type_fld" value="fld">
+			<label for="rdo_gs_type_fld" class="rdo-label">Fluid</label><br>
+			<label for="txt_total_width"><span class="required"></span>Total Width</label>
+			<input type="text" id="txt_total_width" value="960"><span class="unit">px</span><br>
+			<label for="txt_columns"><span class="required"></span>Columns</label>
+			<input type="text" id="txt_columns" value="4"><span class="unit">ea</span><br>
+			<label for="txt_margin_width">Margin</label>
+			<input type="text" id="txt_margin_width" value="10"><span class="unit">px</span><br>
+			<label for="txt_gutter_width">Gutter</label>
+			<input type="text" id="txt_gutter_width" value="20"><span class="unit">px</span>
+			<button class="btn-calculate" type="button">CALCULATE</button>
+			<button class="btn-remove" type="button">REMOVE</button>
+	</div>
+	<script src="js/js-utils.js"></script>
+  <script src="js/grid-system-previewer.js"></script>
+</body>
+</html>

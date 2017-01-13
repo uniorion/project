@@ -1,0 +1,53 @@
+
+html {
+	font-size: 0.625rem;
+}
+body {
+	padding: 1rem 0 1rem 2rem;
+	width: 25rem;
+	font-size: 1.6rem;
+}
+.container {
+	/*text-align: center;*/
+}
+input[type="text"] { 
+	margin-top: 1rem;
+	margin-right: 0.5rem;
+	padding-right: 1rem;
+	width: 10rem;
+	height: 3rem;
+	text-align: right;
+	border: 1px solid #b0bbb0;
+}
+label:not(.rdo-label) {
+	display: inline-block;
+	width: 9.3rem;
+}
+.rdo-label {
+	margin-right: 1.5rem;
+	font-size: 1.4rem;
+}
+/* 버튼 디자인  */
+button {
+	padding: 0.5rem;
+	height: 3.5rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+button:hover,
+button:focus {
+	outline: 2px solid #62abff;
+}
+.btn-calculate, 
+.btn-remove {
+	margin-top: 1rem;
+	width: 10.2rem;
+}
+.btn-calculate {
+	background: #dfd4b8;
+	color: #991515;
+}
+.btn-remove {
+	background: #738672;
+	color: #fff;
+}
