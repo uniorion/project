@@ -1,0 +1,135 @@
+/* 초기화 */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 0.625rem;
+  color: #333;
+}
+body {
+  font-size: 1em;
+}
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: #333;
+}
+a:hover,
+a:focus {
+  outline: none;
+}
+button {
+  border: 0;
+  background: transparent;
+}
+img {
+  vertical-align: top;
+}
+
+/* 공통 */
+.a11y-hidden {
+  display: inline-block;
+  text-indent: -9999em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 레이아웃 */
+.container {
+  min-width: 720px;
+  max-width: 100%px;
+  background: #f6f6f6;
+}
+.top-wrap {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: #ffa409;
+  z-index: 99999;
+}
+
+/* top 영역 */
+.top {
+  position: relative;
+  padding-top: 25px;
+  padding-left: 30px;
+}
+.top p {
+  display: inline;
+  margin-left: 35px;
+  font-size: 3.8rem;
+  color: #fff;
+}
+.top [class*="btn-"] {
+  position: absolute;
+  top: 28px;
+}
+.top .btn-share {
+  right: 146px;
+  width: 35px;
+  height: 42px;
+  background: url('../images/icon-share.png') no-repeat;
+}
+.top .btn-like {
+  right: 34px;
+  width: 42px;
+  height: 40px;
+  background: url('../images/icon-like-normal.png') no-repeat;
+}
+
+/* 캐러셀 영역 */
+.carousel {
+  position: relative;
+  margin-top: -70px;
+  width: 100%;
+  height: 812px;
+}
+.carousel li{
+  display: none;
+  width: 100%;
+}
+.carousel img {
+  width: 100%;
+}
+.carousel li.show{
+  display: block;
+}
+.banner-safe-wrap {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: -66px;
+  width: 100%;
+  height: 90px;
+  background: #0ec4bf;
+}
+.banner-safe-wrap.show {
+  display: block;
+}
+.banner-safe {
+  padding-top: 18px;
+}
+.banner-safe .safe {
+  display: inline-block;
+  width: 178px;
+  height: 53px;
+  background: url('../images/icon-safe.png') no-repeat; 
+}
+.banner-safe p {
+  display: inline;
+  margin-left: 20px;
+  font-size: 3.6rem;
+  color: #fff;
+  vertical-align: top;
+}
+.banner-safe .btn-help {
+  position: absolute;
+  top: 28px;
+  right: 34px;
+  width: 42px;
+  height: 40px;
+  background: url('../images/icon-help.png') no-repeat;
+}
