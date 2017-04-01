@@ -3,11 +3,15 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
   padding: 0;
 }
+div,table,ul,li,p,button,a,img,span {
+  box-sizing: border-box;
+}
 html {
   font-size: 0.625rem;
   color: #333;
 }
 body {
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1em;
 }
 a:link,
@@ -28,7 +32,22 @@ button {
 img {
   vertical-align: top;
 }
-
+caption {
+  text-indent: -9999em;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+h3 {
+  font-size: 3.4rem;
+}
+li {
+  list-style: none;
+}
+em {
+  font-style: normal;
+}
 /* 공통 */
 .a11y-hidden {
   display: inline-block;
@@ -36,11 +55,17 @@ img {
   white-space: nowrap;
   overflow: hidden;
 }
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 /* 레이아웃 */
 .container {
+  margin: 0 auto;
   min-width: 720px;
-  max-width: 100%px;
+  max-width: 720px;
   background: #f6f6f6;
 }
 .top-wrap {
@@ -50,10 +75,19 @@ img {
   background: #ffa409;
   z-index: 99999;
 }
+.main {
+  position: relative;
+  margin-top: 66px;
+  padding: 0 20px;
+  z-index: 99999;
+  background: #f6f6f6;
+}
 
 /* top 영역 */
 .top {
   position: relative;
+  display: flex;
+  align-items: center;
   padding-top: 25px;
   padding-left: 30px;
 }
@@ -132,4 +166,199 @@ img {
   width: 42px;
   height: 40px;
   background: url('../images/icon-help.png') no-repeat;
+}
+
+/* 메인 영역 */
+.main h3{
+  padding-top: 30px;
+  padding-left: 16px;
+}
+.main table {
+  margin-top: 26px;
+  width: 100%;
+  border: 2px solid #e1e1e1;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 2.6rem;
+}
+.main table .col-head {
+  width: 29.166%;
+}
+.main table tr {
+  height: 80px;
+}
+.main table tr.divide{
+  border-bottom: 2px solid #eeeeee;
+}
+.main table th {
+  padding-left: 22px;
+  background: #fafafa;
+  color: #6a6a6a;
+  text-align: left; 
+}
+.main table td {
+  padding-left: 22px;
+  background: #fff;
+}
+.main .textbox {
+  margin-top: 20px;
+  padding: 26px 18px;
+  width: 100%;
+  border: 2px solid #e1e1e1;
+  background: #fff;
+  font-size: 2.6rem;
+  line-height: 1.7;
+}
+.main .photobox1 {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px 22px;
+  width: 100%;
+  border: 2px solid #e1e1e1;
+  background: #fff;
+  font-size: 2.6rem;
+  line-height: 1.7;
+}
+.main .photobox1 .photo {
+  float: left;
+  width: 35.294%; 
+}
+.main .photobox1 .info {
+  float: left;
+  padding-left: 35px;
+  width: 64.706%;
+}
+.main .photobox1 img {
+  width: 100%;
+}
+/** 룸 상세 영역 **/
+.infomation table td strong {
+  font-size: 3.4rem;
+  color: #ff7800;
+}
+
+/** 상세설명 영역 **/
+.description .textbox p {
+}
+/** 담당자한마디 영역 **/
+
+/** 건물정보 **/
+.building .adress {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eeeeee;
+}
+.building .adress em{
+  display: block;
+  font-weight: 700;
+}
+.building .subinfo {
+  padding-top: 4px;
+}
+
+/** 위치보기 **/
+.location .mapbox {
+  margin-top: 20px;
+  width: 100%;
+  border: 2px solid #e1e1e1;
+}
+.location .mapfunc {
+  border: 2px solid #e1e1e1;
+  border-top: 0;
+  background: #fff;
+}
+.location .mapfunc ul {
+  width: 100%;
+}
+.location .mapfunc li {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 76px;
+  text-align: center;
+}
+.location .mapfunc li:not(:first-child) {
+  border-left: 2px solid #e1e1e1;
+}
+.location .mapfunc button {
+  display: block;
+  padding-left: 48px;
+  font-size: 3.4rem;
+}
+.location .mapfunc .btn-map-view {
+  background: url("../images/icon-map-view.png") no-repeat 0 6px;
+}
+.location .mapfunc .btn-street-view {
+  background: url("../images/icon-street-view.png") no-repeat 0 2px;
+}
+
+/** 중개사정보 **/
+
+/** 주의 영역 **/
+.notice {
+  margin-top: 20px;
+  padding: 20px 22px;
+  width: 100%;
+  background: #848484;
+  font-size: 2.4rem;
+  font-weight: 200;
+  color: #fff;
+  line-height: 1.7;
+}
+.notice em {
+  font-weight: 700;
+}
+
+/* 문의하기 영역 */
+.contact {
+  position: relative;
+  margin-top: 20px;
+  padding: 26px 18px;
+  width: 100%;
+  border: 2px solid #e1e1e1;
+  background: #fff;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.contact .title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #8f8f8f;
+} 
+.contact .paralegal {
+  color: #2f2f2f;
+} 
+.contact .phone {
+  margin-right: 10px;
+  font-weight: 700;
+  color: #ee760c;
+}
+.contact .mediation-mark {
+  display: none;
+  padding: 2px;
+  width: 60px;
+  height: 2.8rem;
+  border: 2px solid #565656;
+  background: #eeeeee;
+  font-size: 1.8rem;
+}
+.contact .mediation-mark.show {
+  display: inline;
+}
+.contact .phone-call {
+  position: absolute;
+  top: 38px;
+  right: 20px;
+}
+.contact .phone-call button {
+  padding-left: 50px;
+  width: 326px;
+  height: 102px;
+  border-radius: 51px;
+  background: #ff5200 url("../images/icon-phone.png") no-repeat 54px 34px;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
 }
